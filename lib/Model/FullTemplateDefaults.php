@@ -1,6 +1,6 @@
 <?php
 /**
- * Template1Defaults
+ * FullTemplateDefaults
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \DocSpring\ObjectSerializer;
 
 /**
- * Template1Defaults Class Doc Comment
+ * FullTemplateDefaults Class Doc Comment
  *
  * @category Class
  * @package  DocSpring
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class Template1Defaults implements ModelInterface, ArrayAccess
+class FullTemplateDefaults implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class Template1Defaults implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'template_1_defaults';
+    protected static $openAPIModelName = 'full_template_defaults';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

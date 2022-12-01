@@ -98,6 +98,13 @@ class SubmissionDataTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "expires_in"
+     */
+    public function testPropertyExpiresIn()
+    {
+    }
+
+    /**
      * Test attribute "field_overrides"
      */
     public function testPropertyFieldOverrides()

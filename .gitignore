@@ -1,5 +1,4 @@
 # ref: https://github.com/github/gitignore/blob/master/Composer.gitignore
-
 composer.phar
 /vendor/
 vendor

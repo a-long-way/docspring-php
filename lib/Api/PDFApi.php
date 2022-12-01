@@ -5866,7 +5866,7 @@ class PDFApi
      *
      * @throws \DocSpring\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \DocSpring\Model\Template1|\DocSpring\Model\AuthenticationError|\DocSpring\Model\Error
+     * @return \DocSpring\Model\FullTemplate|\DocSpring\Model\AuthenticationError|\DocSpring\Model\Error
      */
     public function getFullTemplate($template_id)
     {
@@ -5883,7 +5883,7 @@ class PDFApi
      *
      * @throws \DocSpring\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \DocSpring\Model\Template1|\DocSpring\Model\AuthenticationError|\DocSpring\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DocSpring\Model\FullTemplate|\DocSpring\Model\AuthenticationError|\DocSpring\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getFullTemplateWithHttpInfo($template_id)
     {
@@ -5920,14 +5920,14 @@ class PDFApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\DocSpring\Model\Template1' === '\SplFileObject') {
+                    if ('\DocSpring\Model\FullTemplate' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\DocSpring\Model\Template1', []),
+                        ObjectSerializer::deserialize($content, '\DocSpring\Model\FullTemplate', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -5957,7 +5957,7 @@ class PDFApi
                     ];
             }
 
-            $returnType = '\DocSpring\Model\Template1';
+            $returnType = '\DocSpring\Model\FullTemplate';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -5976,7 +5976,7 @@ class PDFApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\DocSpring\Model\Template1',
+                        '\DocSpring\Model\FullTemplate',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6034,7 +6034,7 @@ class PDFApi
      */
     public function getFullTemplateAsyncWithHttpInfo($template_id)
     {
-        $returnType = '\DocSpring\Model\Template1';
+        $returnType = '\DocSpring\Model\FullTemplate';
         $request = $this->getFullTemplateRequest($template_id);
 
         return $this->client

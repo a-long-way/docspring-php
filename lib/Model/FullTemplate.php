@@ -1,6 +1,6 @@
 <?php
 /**
- * Template1
+ * FullTemplate
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \DocSpring\ObjectSerializer;
 
 /**
- * Template1 Class Doc Comment
+ * FullTemplate Class Doc Comment
  *
  * @category Class
  * @package  DocSpring
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class Template1 implements ModelInterface, ArrayAccess
+class FullTemplate implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class Template1 implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'template_1';
+    protected static $openAPIModelName = 'full_template';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -86,7 +86,7 @@ class Template1 implements ModelInterface, ArrayAccess
         'shared_field_data' => 'object',
         'document_md5' => 'string',
         'first_template' => 'bool',
-        'defaults' => '\DocSpring\Model\Template1Defaults',
+        'defaults' => '\DocSpring\Model\FullTemplateDefaults',
         'editable_submissions' => 'bool',
         'expire_submissions' => 'bool',
         'name' => 'string',
@@ -1165,7 +1165,7 @@ class Template1 implements ModelInterface, ArrayAccess
     /**
      * Gets defaults
      *
-     * @return \DocSpring\Model\Template1Defaults|null
+     * @return \DocSpring\Model\FullTemplateDefaults|null
      */
     public function getDefaults()
     {
@@ -1175,7 +1175,7 @@ class Template1 implements ModelInterface, ArrayAccess
     /**
      * Sets defaults
      *
-     * @param \DocSpring\Model\Template1Defaults|null $defaults defaults
+     * @param \DocSpring\Model\FullTemplateDefaults|null $defaults defaults
      *
      * @return $this
      */

@@ -518,6 +518,13 @@ class TemplatestemplateIdaddFieldsFieldsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "placeholder"
+     */
+    public function testPropertyPlaceholder()
+    {
+    }
+
+    /**
      * Test attribute "strikethrough"
      */
     public function testPropertyStrikethrough()

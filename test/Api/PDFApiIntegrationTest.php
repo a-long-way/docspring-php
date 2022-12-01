@@ -94,12 +94,13 @@ class PDFApiTest extends \PHPUnit_Framework_TestCase
       $template_id = 'tpl_000000000000000001'; // string |
       $submission_data = new \DocSpring\Model\SubmissionData();
       $submission_data->setData([
-        "title" => 'Test PDF',
-        "description" => 'This is a test PDF!',
+        "first_name" => 'John',
+        "last_name" => 'Smith',
+        "phone_number" => '+11234567890',
       ]);
       $submission_data->setTest(false);
       $submission_data->setFieldOverrides([
-        "title" => [
+        "phone_number" => [
           "required" => false
         ]
       ]);
@@ -127,14 +128,16 @@ class PDFApiTest extends \PHPUnit_Framework_TestCase
         "submissions" => array(
           [
             'data' => [
-              "title" => 'Test PDF',
-              "description" => 'This PDF is great!',
+              "first_name" => 'John',
+              "last_name" => 'Smith',
+              "phone_number" => '+11234567890',
             ]
           ],
           [
             'data' => [
-              "title" => 'Test PDF 2',
-              "description" => 'This PDF is also great!',
+              "first_name" => 'Jane',
+              "last_name" => 'Doe',
+              "phone_number" => '+64215556789',
             ]
           ]
         )
@@ -228,13 +231,13 @@ class PDFApiTest extends \PHPUnit_Framework_TestCase
 
       $submission = new Model\SubmissionData();
       $submission->setData([
-        "title" => 'Test PDF',
+        "first_name" => 'John',
       ]);
       $submission->setDataRequests(array(
         [
           "name" => 'John Smith',
           "email" => 'jsmith@example.com',
-          "fields" => array('description'),
+          "fields" => array('last_name', 'phone_number'),
           "order" => 1,
           "auth_type" => 'email_link'
         ]
@@ -255,7 +258,7 @@ class PDFApiTest extends \PHPUnit_Framework_TestCase
 
       $this->assertStringStartsWith('drq_', $data_request->getId());
       $this->assertEquals('pending', $data_request->getState());
-      $this->assertEquals(array('description'), $data_request->getFields());
+      $this->assertEquals(array('last_name', 'phone_number'), $data_request->getFields());
       $this->assertEquals(1, $data_request->getOrder());
       $this->assertEquals('John Smith', $data_request->getName());
       $this->assertEquals('jsmith@example.com', $data_request->getEmail());
@@ -272,7 +275,7 @@ class PDFApiTest extends \PHPUnit_Framework_TestCase
       $data_request = $this->docspring->getDataRequest($id);
       $this->assertStringStartsWith('drq_', $data_request->getId());
       $this->assertEquals('pending', $data_request->getState());
-      $this->assertEquals(array('description'), $data_request->getFields());
+      $this->assertEquals(array('last_name', 'phone_number'), $data_request->getFields());
       $this->assertEquals(1, $data_request->getOrder());
       $this->assertEquals('John Smith', $data_request->getName());
       $this->assertEquals('oauth', $data_request->getAuthType());

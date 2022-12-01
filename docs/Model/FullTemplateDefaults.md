@@ -1,4 +1,4 @@
-# Template1Defaults
+# FullTemplateDefaults
 
 ## Properties
 Name | Type | Description | Notes

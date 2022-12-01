@@ -1,6 +1,6 @@
 <?php
 /**
- * Template1Test
+ * FullTemplateTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace DocSpring;
 
 /**
- * Template1Test Class Doc Comment
+ * FullTemplateTest Class Doc Comment
  *
  * @category    Class
- * @description Template1
+ * @description FullTemplate
  * @package     DocSpring
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class Template1Test extends \PHPUnit_Framework_TestCase
+class FullTemplateTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,9 +70,9 @@ class Template1Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Template1"
+     * Test "FullTemplate"
      */
-    public function testTemplate1()
+    public function testFullTemplate()
     {
     }
 

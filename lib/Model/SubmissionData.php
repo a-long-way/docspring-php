@@ -60,6 +60,7 @@ class SubmissionData implements ModelInterface, ArrayAccess
         'css' => 'string',
         'data' => 'object',
         'data_requests' => '\DocSpring\Model\CreateSubmissionDataRequestData[]',
+        'expires_in' => 'int',
         'field_overrides' => 'object',
         'html' => 'string',
         'metadata' => 'object',
@@ -76,6 +77,7 @@ class SubmissionData implements ModelInterface, ArrayAccess
         'css' => null,
         'data' => null,
         'data_requests' => null,
+        'expires_in' => null,
         'field_overrides' => null,
         'html' => null,
         'metadata' => null,
@@ -113,6 +115,7 @@ class SubmissionData implements ModelInterface, ArrayAccess
         'css' => 'css',
         'data' => 'data',
         'data_requests' => 'data_requests',
+        'expires_in' => 'expires_in',
         'field_overrides' => 'field_overrides',
         'html' => 'html',
         'metadata' => 'metadata',
@@ -129,6 +132,7 @@ class SubmissionData implements ModelInterface, ArrayAccess
         'css' => 'setCss',
         'data' => 'setData',
         'data_requests' => 'setDataRequests',
+        'expires_in' => 'setExpiresIn',
         'field_overrides' => 'setFieldOverrides',
         'html' => 'setHtml',
         'metadata' => 'setMetadata',
@@ -145,6 +149,7 @@ class SubmissionData implements ModelInterface, ArrayAccess
         'css' => 'getCss',
         'data' => 'getData',
         'data_requests' => 'getDataRequests',
+        'expires_in' => 'getExpiresIn',
         'field_overrides' => 'getFieldOverrides',
         'html' => 'getHtml',
         'metadata' => 'getMetadata',
@@ -215,6 +220,7 @@ class SubmissionData implements ModelInterface, ArrayAccess
         $this->container['css'] = isset($data['css']) ? $data['css'] : null;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
         $this->container['data_requests'] = isset($data['data_requests']) ? $data['data_requests'] : null;
+        $this->container['expires_in'] = isset($data['expires_in']) ? $data['expires_in'] : null;
         $this->container['field_overrides'] = isset($data['field_overrides']) ? $data['field_overrides'] : null;
         $this->container['html'] = isset($data['html']) ? $data['html'] : null;
         $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
@@ -317,6 +323,30 @@ class SubmissionData implements ModelInterface, ArrayAccess
     public function setDataRequests($data_requests)
     {
         $this->container['data_requests'] = $data_requests;
+
+        return $this;
+    }
+
+    /**
+     * Gets expires_in
+     *
+     * @return int|null
+     */
+    public function getExpiresIn()
+    {
+        return $this->container['expires_in'];
+    }
+
+    /**
+     * Sets expires_in
+     *
+     * @param int|null $expires_in expires_in
+     *
+     * @return $this
+     */
+    public function setExpiresIn($expires_in)
+    {
+        $this->container['expires_in'] = $expires_in;
 
         return $this;
     }

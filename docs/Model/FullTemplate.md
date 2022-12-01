@@ -1,4 +1,4 @@
-# Template1
+# FullTemplate
 
 ## Properties
 Name | Type | Description | Notes
@@ -32,7 +32,7 @@ Name | Type | Description | Notes
 **shared_field_data** | **object** |  | [optional] 
 **document_md5** | **string** |  | [optional] 
 **first_template** | **bool** |  | [optional] 
-**defaults** | [**\DocSpring\Model\Template1Defaults**](Template1Defaults.md) |  | [optional] 
+**defaults** | [**\DocSpring\Model\FullTemplateDefaults**](FullTemplateDefaults.md) |  | [optional] 
 **editable_submissions** | **bool** |  | [optional] 
 **expire_submissions** | **bool** |  | [optional] 
 **name** | **string** |  | [optional] 

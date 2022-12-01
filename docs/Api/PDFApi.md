@@ -1025,7 +1025,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getFullTemplate**
-> \DocSpring\Model\Template1 getFullTemplate($template_id)
+> \DocSpring\Model\FullTemplate getFullTemplate($template_id)
 
 Fetch the full template attributes
 
@@ -1065,7 +1065,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\DocSpring\Model\Template1**](../Model/Template1.md)
+[**\DocSpring\Model\FullTemplate**](../Model/FullTemplate.md)
 
 ### Authorization
 

@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **css** | **string** |  | [optional] 
 **data** | **object** |  | 
 **data_requests** | [**\DocSpring\Model\CreateSubmissionDataRequestData[]**](CreateSubmissionDataRequestData.md) |  | [optional] 
+**expires_in** | **int** |  | [optional] 
 **field_overrides** | **object** |  | [optional] 
 **html** | **string** |  | [optional] 
 **metadata** | **object** |  | [optional] 

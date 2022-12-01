@@ -84,6 +84,13 @@ class SubmissionDataRequestTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "submission_id"
+     */
+    public function testPropertySubmissionId()
+    {
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()

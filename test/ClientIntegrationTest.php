@@ -89,12 +89,13 @@ class ClientTest extends \PHPUnit_Framework_TestCase
       $template_id = 'tpl_000000000000000001'; // string |
       $submission_data = new \DocSpring\Model\SubmissionData();
       $submission_data->setData([
-        "title" => 'Test PDF',
-        "description" => 'This is a test PDF!',
+        "first_name" => 'John',
+        "last_name" => 'Smith',
+        "phone_number" => '+11234567890',
       ]);
       $submission_data->setTest(false);
       $submission_data->setFieldOverrides([
-        "title" => [
+        "phone_number" => [
           "required" => false
         ]
       ]);

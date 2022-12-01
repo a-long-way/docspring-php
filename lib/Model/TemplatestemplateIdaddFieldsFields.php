@@ -120,6 +120,7 @@ class TemplatestemplateIdaddFieldsFields implements ModelInterface, ArrayAccess
         'qrcode_color_field_required' => 'bool',
         'currency' => 'bool',
         'false_text' => 'string',
+        'placeholder' => 'string',
         'strikethrough' => 'bool',
         'character_spacing' => 'float',
         'number_condition_range_max' => 'float',
@@ -213,6 +214,7 @@ class TemplatestemplateIdaddFieldsFields implements ModelInterface, ArrayAccess
         'qrcode_color_field_required' => null,
         'currency' => null,
         'false_text' => null,
+        'placeholder' => null,
         'strikethrough' => null,
         'character_spacing' => null,
         'number_condition_range_max' => null,
@@ -327,6 +329,7 @@ class TemplatestemplateIdaddFieldsFields implements ModelInterface, ArrayAccess
         'qrcode_color_field_required' => 'qrcodeColorFieldRequired',
         'currency' => 'currency',
         'false_text' => 'falseText',
+        'placeholder' => 'placeholder',
         'strikethrough' => 'strikethrough',
         'character_spacing' => 'characterSpacing',
         'number_condition_range_max' => 'numberConditionRangeMax',
@@ -420,6 +423,7 @@ class TemplatestemplateIdaddFieldsFields implements ModelInterface, ArrayAccess
         'qrcode_color_field_required' => 'setQrcodeColorFieldRequired',
         'currency' => 'setCurrency',
         'false_text' => 'setFalseText',
+        'placeholder' => 'setPlaceholder',
         'strikethrough' => 'setStrikethrough',
         'character_spacing' => 'setCharacterSpacing',
         'number_condition_range_max' => 'setNumberConditionRangeMax',
@@ -513,6 +517,7 @@ class TemplatestemplateIdaddFieldsFields implements ModelInterface, ArrayAccess
         'qrcode_color_field_required' => 'getQrcodeColorFieldRequired',
         'currency' => 'getCurrency',
         'false_text' => 'getFalseText',
+        'placeholder' => 'getPlaceholder',
         'strikethrough' => 'getStrikethrough',
         'character_spacing' => 'getCharacterSpacing',
         'number_condition_range_max' => 'getNumberConditionRangeMax',
@@ -897,6 +902,7 @@ class TemplatestemplateIdaddFieldsFields implements ModelInterface, ArrayAccess
         $this->container['qrcode_color_field_required'] = isset($data['qrcode_color_field_required']) ? $data['qrcode_color_field_required'] : null;
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
         $this->container['false_text'] = isset($data['false_text']) ? $data['false_text'] : null;
+        $this->container['placeholder'] = isset($data['placeholder']) ? $data['placeholder'] : null;
         $this->container['strikethrough'] = isset($data['strikethrough']) ? $data['strikethrough'] : null;
         $this->container['character_spacing'] = isset($data['character_spacing']) ? $data['character_spacing'] : null;
         $this->container['number_condition_range_max'] = isset($data['number_condition_range_max']) ? $data['number_condition_range_max'] : null;
@@ -2708,6 +2714,30 @@ class TemplatestemplateIdaddFieldsFields implements ModelInterface, ArrayAccess
     public function setFalseText($false_text)
     {
         $this->container['false_text'] = $false_text;
+
+        return $this;
+    }
+
+    /**
+     * Gets placeholder
+     *
+     * @return string|null
+     */
+    public function getPlaceholder()
+    {
+        return $this->container['placeholder'];
+    }
+
+    /**
+     * Sets placeholder
+     *
+     * @param string|null $placeholder placeholder
+     *
+     * @return $this
+     */
+    public function setPlaceholder($placeholder)
+    {
+        $this->container['placeholder'] = $placeholder;
 
         return $this;
     }

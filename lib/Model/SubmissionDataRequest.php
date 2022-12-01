@@ -58,6 +58,7 @@ class SubmissionDataRequest implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'id' => 'string',
+        'submission_id' => 'string',
         'name' => 'string',
         'email' => 'string',
         'order' => 'int',
@@ -86,6 +87,7 @@ class SubmissionDataRequest implements ModelInterface, ArrayAccess
       */
     protected static $openAPIFormats = [
         'id' => null,
+        'submission_id' => null,
         'name' => null,
         'email' => null,
         'order' => null,
@@ -135,6 +137,7 @@ class SubmissionDataRequest implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'submission_id' => 'submission_id',
         'name' => 'name',
         'email' => 'email',
         'order' => 'order',
@@ -163,6 +166,7 @@ class SubmissionDataRequest implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'submission_id' => 'setSubmissionId',
         'name' => 'setName',
         'email' => 'setEmail',
         'order' => 'setOrder',
@@ -191,6 +195,7 @@ class SubmissionDataRequest implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'submission_id' => 'getSubmissionId',
         'name' => 'getName',
         'email' => 'getEmail',
         'order' => 'getOrder',
@@ -336,6 +341,7 @@ class SubmissionDataRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['submission_id'] = isset($data['submission_id']) ? $data['submission_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
@@ -449,6 +455,30 @@ class SubmissionDataRequest implements ModelInterface, ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets submission_id
+     *
+     * @return string|null
+     */
+    public function getSubmissionId()
+    {
+        return $this->container['submission_id'];
+    }
+
+    /**
+     * Sets submission_id
+     *
+     * @param string|null $submission_id submission_id
+     *
+     * @return $this
+     */
+    public function setSubmissionId($submission_id)
+    {
+        $this->container['submission_id'] = $submission_id;
 
         return $this;
     }
